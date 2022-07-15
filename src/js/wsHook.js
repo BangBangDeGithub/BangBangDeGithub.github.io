@@ -66,6 +66,7 @@ var wsHook = {};
     WSObject.addEventListener = function () {
       var eventThis = this
       // if eventName is 'message'
+      console.log(arguments)
       if (arguments[0] === 'message') {
         arguments[1] = (function (userFunc) {
           return function instrumentAddEventListener () {
